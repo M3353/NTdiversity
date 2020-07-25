@@ -14,7 +14,7 @@ h2{
     text-transform: uppercase;
     font-family: 'PT Sans', sans-serif;
     font-size: 36px;
-    margin: 1.25em 0 .5em 0; 
+    margin: 1.25em 0 .75em 0; 
     padding:5px 0px;
     letter-spacing: .1em;
     line-height: 42px;
@@ -116,7 +116,7 @@ ul{
 
 
 
-/* start background */
+/* start main background */
 
 #main-ground{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.6) 100%),
@@ -164,7 +164,7 @@ ul{
 }
 .sub-background p{
     bottom:7em;
-    left:2.5em;
+    left:2em;
     display: block;
     position: absolute;
     color: white;
@@ -173,7 +173,7 @@ ul{
     font-size: 3rem;
 }
 
-/* end background */
+/* end main background */
 
 
 
@@ -192,7 +192,8 @@ ul{
 .section{
     flex: 1;
     margin: 1.5em;
-    padding: .25em 2rem 2rem 2rem;
+    padding: .25em 2rem 2.5rem 2rem;
+    align-items: center;
 }
 #blurb {
     font-family: 'Didact Gothic', sans-serif;
@@ -201,20 +202,30 @@ ul{
     text-align: center;
     letter-spacing: 0.1em;
 }
-/* section background images/color */
+
+/* section background images/colors */
 #about {
     background:linear-gradient(180deg, rgba(0, 181, 221, 0.4) 79.17%, rgba(22, 196, 235, 0.4) 100%),
         url(Images/Blue\ Polygon.PNG);
     color: white;
+    background-size: cover;
 }
 #involve {
     background:linear-gradient(180deg, rgba(5, 194, 128, 0.6) 100%, rgba(5, 194, 128, 0.6) 100%),
         url(Images/Green\ Polygon.PNG);
     color: white;
+    background-size: cover;
+}
+#join{
+    text-align: center;
+    background: #fafafa;
 }
 .gray{
     background: #f4f4f4;
     color: black;
+}
+.gray p{
+    color: #1f1f1f;
 }
 .green{
     background-color: rgba(5, 194, 128, 0.9);
@@ -228,6 +239,13 @@ ul{
     background: #1f1f1f;
     color: white;
 }
+.green p,
+.blue p,
+.black p{
+    color: #f1f1f1;
+}
+/* section background images/colors end */
+
 .info{
     font-family: 'Lora', serif;
     font-size: 18px;
@@ -238,9 +256,6 @@ ul{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
-}
-#join{
-    text-align: center;
 }
 .proposal-list {
     text-align: left;
@@ -276,6 +291,62 @@ ul{
 }
 /* end of list of team names */
 
+/* button layout */
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.btn-group a {
+    flex: 1;
+    border-radius: 2px;
+    padding: 1em 2.4em;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin: 2.5rem 1.75rem .375rem 1.75rem;
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: .02em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.btn-blue{
+    background-color: rgba(20, 195, 200, 1);
+    color: #fff;
+}
+.btn-blue:hover{
+    background: #079FA9;
+}
+.btn-green{
+    background-color: rgba(5, 194, 128, 0.9);
+    color: white;
+}
+.btn-green:hover{
+    background-color: #1CA072;
+}
+.btn-white{
+    background-color: #f1f1f1;
+    color: #1f1f1f;
+}
+.btn-white:hover{
+    background: #cdcdcd;;
+}
+
+.footer-btn{
+    background-color: #00d188;
+    color: white;
+    margin:0;
+    padding:.5em 1em;
+}
+
+/* end button layout */
 /* end main section */
 
 
@@ -438,6 +509,9 @@ form {
     .section{
         margin: 0;
         padding: 4% 10% 8% 10%;
+    }
+    #blurb{
+        padding-top: 4em;
     }
     .info {
         margin:0;
