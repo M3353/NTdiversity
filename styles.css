@@ -1,0 +1,573 @@
+/*
+font-family: 'Lora', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Merriweather', serif;
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    scroll-behavior: smooth;
+}
+h2{
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 36px;
+    margin: 1.25em 0 .75em 0; 
+    padding:5px 0px;
+    letter-spacing: .1em;
+    line-height: 42px;
+}
+h3{ 
+    font-family: 'Merriweather', serif;
+    margin: 1em 0;
+}
+h4{
+    text-decoration: underline;
+    font-family: 'Merriweather', serif;
+    margin: 1em 0;
+
+}
+ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.merriweather {
+    font-family: 'Merriweather', serif;
+}
+
+
+/* start navbar stuff */
+.navbar {
+    background:transparent;
+    position:fixed;
+    margin-top:auto;
+    padding-bottom:15px;
+    width: 100%;
+    color: white;
+    z-index: 10; /* navbar always above everything else */
+    
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.navbar.scrolled {
+    background: white;
+    color: #111111; /* affects color of logo */
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+}
+.logo {
+    display: inline-block;
+    font-size:36px;
+    font-family: 'Merriweather', serif;
+    line-height: 54px;
+    margin-top:15px;
+    margin-left:30px;
+    color: inherit;
+}
+.main-nav {
+    display:none;
+    list-style: none;
+    border: 2px solid white;
+}
+.main-nav li{
+    text-align: center;
+    margin:20px auto;
+    padding: 5px;
+}
+.nav-links {
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: .02em;
+    font-size: 18px;
+    color:white;
+
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    
+}
+.nav-links.scrolled{
+    color: #111111;
+}
+.nav-links:hover {
+    color:turquoise;
+    letter-spacing: .1em;
+}
+.nav-links,
+.logo {
+    text-decoration: none;
+}
+.navbar-toggle {
+    position: absolute;
+    top: 27px;
+    right: 30px;
+    cursor: pointer; 
+    color: white;
+    font-size: 24px;
+}
+.navbar-toggle.scrolled {
+    color: black;
+}
+/* end navbar stuff */
+
+
+
+/* start main background */
+#main-ground{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.6) 100%),
+        url(Images/New\ Trier.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+#init-ground{
+    background: linear-gradient(104.68deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 99.32%),
+        url(Images/Initiatives.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+}
+#team-ground{
+    background: linear-gradient(104.68deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 99.32%),
+        url(Images/Team.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+}
+#vol-ground{
+    background: linear-gradient(104.68deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 99.32%),
+        url(Images/Volunteer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+}
+#blue-ground {
+    background:darkcyan;
+    width: 100%;
+    height: 50vh;
+}
+.background p{
+    display: none;
+}
+.sub-background p{
+    top:4em;
+    left:2em;
+    display: block;
+    position: absolute;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 3rem;
+}
+#arrow{
+    position: absolute;
+    bottom: 2rem;
+    right: 50vw;
+    font-size: 3em;
+    color: rgba(205, 205, 205, 0.8);
+}
+#arrow:hover {
+    color: rgba(235, 235, 235, 1);
+}
+/*bounce animation */
+  
+/* end main background */
+
+
+
+/* main section */
+.announcement{
+    width: 100%;
+    position: fixed;
+    background-color: #FFFDDE;
+    height:30px; 
+    border:thin solid #EDDD00;
+    color: Black;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.section{
+    flex: 1;
+    margin: 1.5em;
+    padding: .25em 2rem 2.5rem 2rem;
+    align-items: center;
+}
+#blurb {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+/* section background images/colors */
+#about {
+    background:linear-gradient(180deg, rgba(0, 181, 221, 0.4) 79.17%, rgba(22, 196, 235, 0.4) 100%),
+        url(Images/Blue\ Polygon.PNG);
+    color: white;
+    background-size: cover;
+}
+#involve {
+    background:linear-gradient(180deg, rgba(5, 194, 128, 0.6) 100%, rgba(5, 194, 128, 0.6) 100%),
+        url(Images/Green\ Polygon.PNG);
+    color: white;
+    background-size: cover;
+}
+#join{
+    text-align: center;
+    background: #fafafa;
+}
+.gray{
+    background: #f4f4f4;
+    color: black;
+}
+.gray p{
+    color: #1f1f1f;
+}
+.green{
+    background-color: rgba(5, 194, 128, 0.9);
+    color: white
+}
+.blue{
+    background-color: rgba(20, 195, 200, 0.9);
+    color: white
+}
+.black {
+    background: #1f1f1f;
+    color: white;
+}
+.green p,
+.blue p,
+.black p{
+    color: #f1f1f1;
+}
+/* section background images/colors end */
+
+.info{
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: .05em;  
+    margin: 0 10px 15px 15px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+.proposal-list {
+    text-align: left;
+}
+
+/* list of team names */
+.team{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.team-column{
+    flex-basis: 100%;
+    flex: 1;
+}
+.title{
+    text-decoration: underline;
+    font-family: 'Merriweather', serif;
+    font-size: 1.15em;
+    letter-spacing: .02em;
+    margin: .75em 0;
+    color:#2f2f2f;
+}
+.names{
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: 0;
+    margin: .5em 0;
+    color: #333333;
+}
+.names span{
+    font-family: 'Roboto', sans-serif;
+}
+/* end of list of team names */
+
+
+/* button/graphics layout */
+.graphic-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.graphic-group a {
+    flex: 1;
+    border-radius: 2px;
+    padding: 1em 2.4em;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin: 2.5rem 1.75rem .375rem 1.75rem;
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: .02em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.graphics {
+    flex:1;
+    text-align: center;
+}
+.graphics p{
+    font-family: "Didact Gothic", sans-serif;
+}
+.graphics h3 a{
+    padding: 0;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+.graphics h3 a:hover{
+    text-decoration: underline;
+}
+.btn-blue{
+    background-color: rgba(20, 195, 200, 1);
+    color: #fff;
+}
+.btn-blue:hover{
+    background: #079FA9;
+}
+.btn-green{
+    background-color: rgba(5, 194, 128, 0.9);
+    color: white;
+}
+.btn-green:hover{
+    background-color: #1CA072;
+}
+.btn-white{
+    background-color: #f1f1f1;
+    color: #1f1f1f;
+}
+.btn-white:hover{
+    background: #cdcdcd;;
+}
+.btn-img {
+    border-radius:4px;
+    padding: .5em;
+    background-color:#f1f1f1;
+    color: black;
+}
+.footer-btn{
+    background-color: #00d188;
+    color: white;
+    margin:0;
+    padding:.5em 1em;
+}
+/* end button/graphics layout */
+
+/* end main section */
+
+
+
+/* start footer stuff */
+
+/* general */
+.footer {
+    background: #1f1f1f;
+    color: white;
+    text-decoration: none;
+}
+.footer a{
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-title {
+    color: white;
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+    padding-bottom: 0.625rem;
+}
+
+/* main section */
+.footer-main {
+    padding: 1.25rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-item{
+    margin:1.0rem;
+    text-align: left;
+    padding: 1.25rem;
+    min-width: 12.5rem;
+}
+.footer li{
+    padding: 5px;
+}
+.footer li a {
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: .05em;
+    color:white;
+}
+
+/* email */
+form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  input[type="email"] {
+    border: 0;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+  }
+  input[type="submit"] {
+    background-color: #00d188;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 0.3125rem;
+  }
+
+/* social media */
+.social {
+    padding: 0 1.875rem 1.25rem;
+}
+.social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #333333 solid; 
+    padding-top: 1.25rem;
+}
+.social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+.social-list li a i:hover {
+    color: #00d188;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* copyright */
+.copyright {
+    padding: 0.9375rem 1.875rem;
+    background-color: #333333;
+}
+.copyright-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.copyrght-list li {
+    font-family: 'Didact Gothic', sans-serif;
+    letter-spacing: .03em;
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+}
+/*space before last entry */
+.copyright-list li:nth-last-child(2) {
+    flex: 1;
+}
+
+/*end footer stuff */
+
+
+@media screen and (min-width:750px) {
+    .navbar {
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 15px;
+    }
+    .logo {
+        margin: 0 0 0 30px;
+    }
+    .main-nav {
+        display: flex !important;
+        margin: 0 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+        border: none;
+    }
+    .main-nav li {
+        display: block;
+        flex:1;
+        margin: 0;
+    }
+    .nav-links {
+        margin-left: 30px;
+    }
+    .navbar-toggle {
+        display: none;
+    }
+    #main-ground p{
+        bottom: 2.5em;
+        left: 2em;
+    }
+    .background p{
+        display: block;
+        position: absolute;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        width: 55%;
+        font-size: 3rem;
+    }
+    .sub-background p{
+        bottom: 6em;
+        left: 3.5em;
+        margin: 0;
+    }
+    .section{
+        margin: 0;
+        padding: 4% 10% 8% 10%;
+    }
+    #blurb{
+        padding-top: 4em;
+    }
+    .info {
+        margin:0;
+    }
+    .images {
+        padding: 3% 5% 6% 5%;
+    }
+    .team{
+        flex-direction: row;
+    }
+    .team-column{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-main{
+        justify-content: space-between;
+    }
+  }
