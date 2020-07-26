@@ -19,7 +19,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script src="script.js"></script>
 </head>
 
@@ -49,6 +50,9 @@
 
         <div class="background" id="main-ground">
             <p>Helping New Trier prepare its students for a racially complex world.</p>
+            <span id="arrow" class="bounce">
+                <i class="fa fa-angle-down"></i>
+            </span>
         </div>
 
         <!-- end background image -->
@@ -59,7 +63,7 @@
         <div class="main">
             <div class = "section gray" id="blurb">
                 <p>
-                    Our mission is to provide an effective, unified voice for all 
+                    The New Trier Coalition for Diversity's mission is to provide an effective, unified voice for all 
                     races/ethnicities in the New Trier student and alumni community, 
                     and to use our unified voice to promote productive discussions 
                     with the New Trier High School administration on issues of race 
@@ -68,19 +72,28 @@
             </div>
             <div class = "section info" id="about">
                 <h2>about us</h2>
-                <p>
-                    In the wake of George Floyd’s death, New Trier has once again been 
-                    starkly reminded of the importance of diversity, inclusion, and education 
-                    around racial issues. Though we respect New Trier High School’s existing 
-                    and ongoing efforts, the school has considerable room for progress. We feel 
-                    that New Trier would benefit from regular discourse with an external organization 
-                    holding the administration accountable for concrete, effective action.
-                </p>
-            </div>
-            <div class = "section" id="buttons">
-                <p>
+                <p>In the wake of George Floyd’s death, New Trier has once again been starkly reminded of the importance of diversity, inclusion, and education around racial issues. Though we respect New Trier High School’s existing and ongoing efforts, the school has considerable room for progress. We feel that New Trier would benefit from regular discourse with an external organization holding the administration accountable for concrete, effective action.</p>
 
-                </p>
+                <br>
+​         
+                <p> We are that external organization. As a long-term solution to ensure that student and alumni voices reach the administration, we created the New Trier Coalition for Diversity. Our mission is to provide an effective, unified voice for all races/ethnicities in the New Trier student and alumni community. We are composed of an equal number of Asian/Pacific Islander, Black, Hispanic/Latinx, Jewish, Middle Eastern, Multiracial, and White representatives who create proposals and discuss ways to make New Trier a more inclusive environment.</p>
+            </div>
+            <div class = "section info images gray">
+                <h2>explore our organization</h2>
+                <div class="graphic-group">
+                    <div class="graphics">
+                        <a href="initiatives.html" style="margin:0"><img src="Images/init.png" class="btn-img"></a>
+                        <h3>Initiatives</h3><p>Check out what we've been up to.</p>
+                    </div>
+                    <div class="graphics">
+                        <a href="team.html" style="margin:0"><img src="Images/team.png" class="btn-img"></a>
+                        <h3>Team</h3><p>Meet our team of dedicated students.</p>
+                    </div>
+                    <div class="graphics">
+                        <a href="volunteer.html" style="margin:0"><img src="Images/vol.png" class="btn-img"></a>
+                        <h3>Volunteer</h3><p>Sign your support for our cause.</p>
+                    </div>
+                </div>
             </div>
             <div class = "section info" id="involve">
                 <h2>Get involved.</h2>
@@ -97,7 +110,7 @@
             <div class = "section" id="join">
                 <h2>join our community today.</h2>
                 <p> 
-                    <div class="btn-group">
+                    <div class="graphic-group">
                         <a class = "btn-blue" type="button" href='https://docs.google.com/forms/d/e/1FAIpQLScUGYvamugfkKNV7Hq_z3aVjcMBmP5GwPKj7iZ9prqxsngBOQ/viewform' target="_blank">Sign your support.</a>
                         <a class = "btn-blue" type="button" href='volunteer.html'>Volunteer.</a>
                     </div>
@@ -128,7 +141,7 @@
                     <div class="footer-item">
                         <h3 class="footer-title">Stay Updated</h3>
                         <p class="merriweather">Subscribe to our newsletter to get our latest news.</p>
-                        <div class="btn-group" style="margin-left:0">
+                        <div class="graphic-group" style="margin-left:0">
                             <a class="footer-btn" type="button" href='https://docs.google.com/forms/d/e/1FAIpQLSdUi6BDOJwf4WWdtp5ei6XCYsXee7U8yOw8419CSxnI7vyELA/viewform' target="_blank" style="padding:.5em; margin: 1em 0">Sign up.</a>
                         </div>
                       </div>
@@ -147,8 +160,8 @@
                 <!-- copyright -->
                 <section class="copyright">
                     <ul class="copyright-list">
-                        <li>Terms &amp; Conditions</li>
-                        <li>Privacy Policy</a></li>
+                        <li><a href="copyright.html">Terms &amp; Conditions</a></li>
+                        <li><a>Privacy Policy</a></li>
                         <li class="merriweather">&copy; The New Trier Coalition for Diversity, 2020</li>
                     </ul>
                 </section>
